@@ -170,7 +170,7 @@ const ReviewPanel = ({
                               </h4>
                             </div>
                           </div>
-                          <div className="text-right">
+                          <div className="text-right flex flex-row gap-2 justify-end">
                             {displayCompare !== null &&
                               displayCompare > 0 &&
                               displayCompare > displayPrice && (
@@ -242,7 +242,7 @@ const ReviewPanel = ({
                       </div>
                     );
                   })}
-                  {index < array.length - 1 && (
+                  {index < array.length && (
                     <div className="border-b border-[#CED6DE] mt-3"></div>
                   )}
                 </div>
@@ -458,13 +458,13 @@ const ReviewPanel = ({
                     </div>
                   );
                 })}
-                {index < array.length - 1 && (
+                {index < array.length && (
                   <div className="border-b border-[#CED6DE] mt-3"></div>
                 )}
               </div>
             ))}
           {items.length > 0 && (
-            <div className="flex justify-between py-1.5 border-t border-[#CED6DE] mt-2 text-[14px]">
+            <div className="flex justify-between py-1.5 mt-2 text-[14px]">
               <div className="flex items-center gap-2">
                 <img
                   src="../assets/SVGs/Fast_Shipping.svg"
