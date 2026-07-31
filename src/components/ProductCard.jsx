@@ -1,4 +1,3 @@
-import React from "react";
 import QuantityStepper from "./QuantityStepper";
 import VariantSelector from "./VariantSelector";
 

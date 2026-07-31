@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useApp } from "./context/AppContext";
+import { useEffect, useState } from "react";
+import { useApp } from "./hook/useApp.js";
 import { bundleData } from "./data/bundleData";
 import Step from "./components/Step";
 import ProductCard from "./components/ProductCard";

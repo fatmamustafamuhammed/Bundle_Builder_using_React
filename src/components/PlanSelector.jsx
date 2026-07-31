@@ -1,5 +1,3 @@
-import React from "react";
-
 const PlanSelector = ({ options, selections, setVariantQuantity }) => {
   const planSel = selections.plan || {};
 

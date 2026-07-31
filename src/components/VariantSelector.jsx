@@ -1,5 +1,3 @@
-import React from "react";
-
 const VariantSelector = ({ variants, activeVariantId, onSelect }) => (
   <div className="flex flex-nowrap items-center gap-2 mt-2">
     {variants.map((v) => {

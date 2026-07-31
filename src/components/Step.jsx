@@ -1,4 +1,3 @@
-import React from "react";
 import { bundleData } from "../data/bundleData";
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
 
