@@ -78,7 +78,7 @@ The app renders entirely from `src/data/products.json`. Each step, product, and 
 - **Variant chip styling:** per the spec, selected-chip highlighting was deprioritized in favor of correct selection-and-quantity behavior.
 - **Checkout button:** wired to a placeholder confirmation (no real checkout flow), as specified.
 
-- ## Notes
+## Notes
 
 ### Decisions
 - Built the project using React.
