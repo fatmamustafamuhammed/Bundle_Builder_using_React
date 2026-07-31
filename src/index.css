@@ -1,1 +1,247 @@
 @import "tailwindcss";
+
+.step-content {
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    padding 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 0 0 0;
+}
+.step-content.open {
+  max-height: 2400px;
+  opacity: 1;
+  padding: 8px 0 20px 0;
+}
+
+.product-card {
+  border: 1.5px solid #e8ecf2;
+  border-radius: 14px;
+  padding: 16px 16px 18px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  overflow: hidden;
+}
+.product-card.selected {
+  border-color: #2d7aff;
+  box-shadow: 0 0 0 3px rgba(45, 122, 255, 0.12);
+}
+.product-card .badge {
+  background: #4e2fd2;
+  color: #ffffff;
+  font-family: "Gilroy-SemiBold", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  padding: 2px 10px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.product-card img {
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: bicubic;
+}
+
+.color-chip {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 600;
+  color: #1a1a2e;
+  background: #f0f2f5;
+  flex-shrink: 0;
+}
+.color-chip.active {
+  border-color: #2d7aff;
+  box-shadow: 0 0 0 2px rgba(45, 122, 255, 0.2);
+}
+.color-chip .check {
+  display: none;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.color-chip.active .check {
+  display: block;
+}
+.color-chip .swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid #dce1e9;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #fff;
+}
+.stepper button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a2e;
+  transition: background 0.15s;
+}
+.stepper button:hover:not(:disabled) {
+  background: #f0f4fe;
+}
+.stepper button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.stepper span {
+  min-width: 28px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.review-item .thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f0f2f5;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #7a7a8a;
+}
+.review-item .info {
+  flex: 1;
+  min-width: 0;
+}
+.review-item .info .name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a2e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review-item .info .pricing {
+  font-size: 12px;
+  color: #5a5a6e;
+}
+.review-item .info .pricing .compare {
+  text-decoration: line-through;
+  color: #a0a0b0;
+  margin-right: 6px;
+}
+.review-item .stepper button {
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+}
+.review-item .stepper span {
+  min-width: 20px;
+  font-size: 12px;
+}
+
+.btn-primary {
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.btn-primary:hover {
+  background: #2d2d4a;
+}
+
+.save-link {
+  color: #5a5a7a;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.15s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.save-link:hover {
+  color: #1a1a2e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .two-col {
+    flex-direction: column;
+  }
+  .two-col .left,
+  .two-col .right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .two-col .right {
+    padding-top: 32px;
+    border-left: none !important;
+    border-top: 1px solid #e8ecf2;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-card {
+    padding: 12px 12px 14px;
+  }
+  .color-chip {
+    width: 28px;
+    height: 28px;
+    font-size: 8px;
+  }
+  .stepper button {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .stepper span {
+    min-width: 22px;
+    font-size: 13px;
+  }
+  .review-item .thumb {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
