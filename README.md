@@ -55,7 +55,7 @@ npm run preview
 
 ## Data Model
 
-The app renders entirely from `src/data/products.json`. Each step, product, and variant is described in data — nothing is hardcoded per-product. Variants carry their own independent quantity, and the "N selected" count, review panel, and totals are all derived from this single source of state.
+The app renders entirely from `src/data/bundleData.js`. Each step, product, and variant is described in data — nothing is hardcoded per-product. Variants carry their own independent quantity, and the "N selected" count, review panel, and totals are all derived from this single source of state.
 
 ## Decisions & Tradeoffs
 
