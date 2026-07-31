@@ -77,3 +77,14 @@ The app renders entirely from `src/data/products.json`. Each step, product, and 
 - **Persistence:** the full configuration (selected quantities per product/variant, active variant per card) is serialized to a single localStorage key on "Save my system for later," and rehydrated on load if present.
 - **Variant chip styling:** per the spec, selected-chip highlighting was deprioritized in favor of correct selection-and-quantity behavior.
 - **Checkout button:** wired to a placeholder confirmation (no real checkout flow), as specified.
+
+- ## Notes
+
+### Decisions
+- Built the project using React.
+- Used Tailwind CSS for faster UI development.
+- Organized the code into reusable components.
+
+### Tradeoffs
+- Focused on the core functionality & adding Styles.
+- Kept state management simple using React Context.
