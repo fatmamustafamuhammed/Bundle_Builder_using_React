@@ -29,7 +29,7 @@ const SatisfactionCheckoutBlock = ({ hasSavings, savings, saveSystem }) => (
         Congrats! You're saving ${savings.toFixed(2)} on your security bundle!
       </div>
     )}
-    <button className="mt-4 w-full h-[48px] rounded bg-[#4E2FD2] text-white font-bold py-[13px] px-[16px]">
+    <button className="mt-1 w-full h-[48px] rounded bg-[#4E2FD2] text-white font-bold py-[13px] px-[16px]">
       Checkout
     </button>
     <div className="mt-3 text-center">

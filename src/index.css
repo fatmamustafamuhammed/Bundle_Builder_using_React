@@ -215,12 +215,11 @@
     max-width: 100% !important;
   }
   .two-col .right {
-    padding-top: 32px;
+    /* padding-top: 32px; */
     border-left: none !important;
     border-top: 1px solid #e8ecf2;
   }
 }
-
 @media (max-width: 640px) {
   .product-card {
     padding: 12px 12px 14px;

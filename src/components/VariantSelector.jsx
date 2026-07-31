@@ -1,4 +1,4 @@
-const VariantSelector = ({ variants, activeVariantId, onSelect }) => (
+const VariantSelector = ({ variants, activeVariantId, onSelect, isTablet }) => (
   <div className="flex flex-nowrap items-center gap-2 mt-2">
     {variants.map((v) => {
       const isActive = activeVariantId === v.id;
@@ -15,7 +15,7 @@ const VariantSelector = ({ variants, activeVariantId, onSelect }) => (
       return (
         <button
           key={v.id}
-          className={`flex items-center gap-1.5 px-2 py-1 rounded-md transition-all whitespace-nowrap text-xs ${
+          className={`flex items-center ${isTablet ? "gap-0" : "gap-.5"} px-2 py-1 rounded-md transition-all whitespace-nowrap text-xs ${
             isActive
               ? "bg-[#1DF0BB0A] ring-1 ring-[#0AA288]"
               : "border border-gray-300"

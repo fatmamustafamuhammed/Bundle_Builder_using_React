@@ -118,7 +118,7 @@ const ReviewPanel = ({
   };
 
   return (
-    <div className="bg-[#f8f9fc] rounded-none p-5">
+    <div className="bg-[#EDF4FF] p-5 rounded-xl">
       {isTablet ? (
         <div className="flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-1/2 min-w-0">
@@ -129,10 +129,10 @@ const ReviewPanel = ({
               Your Security System
             </h3>
             <p className="text-[13px] text-[#6F7882] -mt-4 mb-4">
-              Review your personalized protection system <br /> designed to keep
-              what matters most safe.
+              Review your personalized protection system designed to keep what
+              matters most safe.
             </p>
-            <div className="border-b border-[#e8ecf2]"></div>
+            <div className="border-b border-[#CED6DE]"></div>
             {categoryOrder
               .filter((cat) => grouped[cat]?.length)
               .map((cat, index, array) => (
@@ -220,7 +220,7 @@ const ReviewPanel = ({
                             size="small"
                             buttonBg="bg-white"
                           />
-                          <div className="text-right flex flex-col items-end min-w-[70px]">
+                          <div className="flex flex-row items-end justify-end gap-2 min-w-[70px]">
                             {displayCompare !== null &&
                               displayCompare > 0 &&
                               displayCompare > displayPrice && (
@@ -243,12 +243,12 @@ const ReviewPanel = ({
                     );
                   })}
                   {index < array.length - 1 && (
-                    <div className="border-b border-[#e8ecf2] mt-3"></div>
+                    <div className="border-b border-[#CED6DE] mt-3"></div>
                   )}
                 </div>
               ))}
             {items.length > 0 && (
-              <div className="flex justify-between py-1.5 border-t border-[#f0f2f5] mt-2 text-[14px]">
+              <div className="flex justify-between py-1.5 mt-2 text-[14px]">
                 <div className="flex items-center gap-2">
                   <img
                     src="../assets/SVGs/Fast_Shipping.svg"
@@ -257,7 +257,7 @@ const ReviewPanel = ({
                   />
                   <span className="text-[#5a5a6e]">Fast Shipping</span>
                 </div>
-                <div className="text-right flex flex-col items-end">
+                <div className="text-right flex flex-row justify-end gap-2 items-end">
                   <span className="text-s text-[#6F7882] line-through">
                     $5.99
                   </span>
@@ -270,7 +270,7 @@ const ReviewPanel = ({
           </div>
 
           <div className="w-full md:w-1/2 min-w-0">
-            <div className="flex items-start gap-3 mb-3">
+            <div className="flex items-center gap-10 mb-3">
               <img
                 src="../assets/images/Satisfaction_Badge_05_1.png"
                 alt="Satisfaction guarantee"
@@ -280,7 +280,7 @@ const ReviewPanel = ({
                 className="text-[18px] leading-[110%] tracking-[0.6px] text-[#1a1a2e]"
                 style={{
                   fontFamily: "Gilroy-SemiBold, Helvetica, Arial, sans-serif",
-                  fontWeight: 400,
+                  fontWeight: "bold",
                 }}
               >
                 30-day hassle-free returns
@@ -317,11 +317,11 @@ const ReviewPanel = ({
               </div>
             )}
 
-            <button className="mt-4 w-full h-[48px] rounded bg-[#4E2FD2] text-white font-bold py-[13px] px-[16px]">
+            <button className="mt-1 w-full h-[48px] rounded bg-[#4E2FD2] text-white font-bold py-[13px] px-[16px]">
               Checkout
             </button>
 
-            <div className="mt-3 text-center">
+            <div className="mt-1 text-center">
               <a
                 className="font-['Gilroy-Medium', 'Helvetica', 'Arial', 'sans-serif'] italic text-sm leading-[1.2] tracking-[-0.02px] underline"
                 onClick={(e) => {
@@ -345,10 +345,10 @@ const ReviewPanel = ({
             Your Security System
           </h3>
           <p className="text-[13px] text-[#6F7882] -mt-4 mb-4">
-            Review your personalized protection system <br /> designed to keep
-            what matters most safe.
+            Review your personalized protection system designed to keep what
+            matters most safe.
           </p>
-          <div className="border-b border-[#e8ecf2]"></div>
+          <div className="border-b border-[#CED6DE]"></div>
           {categoryOrder
             .filter((cat) => grouped[cat]?.length)
             .map((cat, index, array) => (
@@ -459,12 +459,12 @@ const ReviewPanel = ({
                   );
                 })}
                 {index < array.length - 1 && (
-                  <div className="border-b border-[#e8ecf2] mt-3"></div>
+                  <div className="border-b border-[#CED6DE] mt-3"></div>
                 )}
               </div>
             ))}
           {items.length > 0 && (
-            <div className="flex justify-between py-1.5 border-t border-[#f0f2f5] mt-2 text-[14px]">
+            <div className="flex justify-between py-1.5 border-t border-[#CED6DE] mt-2 text-[14px]">
               <div className="flex items-center gap-2">
                 <img
                   src="../assets/SVGs/Fast_Shipping.svg"

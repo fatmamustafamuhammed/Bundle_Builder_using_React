@@ -27,21 +27,21 @@ const Step = ({ step, isOpen, onToggle, selections, children }) => {
 
   return (
     <div
-      className={`border-b border-[#e8ecf2] last:border-0 p-0 md:p-2 rounded-lg overflow-hidden ${isOpen ? "bg-[#f8f9fc]" : ""}`}
+      className={`last:border-0 p-0 ${isOpen ? "" : "border-b border-[#1F1F1F] "} overflow-hidden ${isOpen ? "bg-[#EDF4FF] rounded-xl" : ""}`}
     >
       <div
-        className="cursor-pointer select-none transition-colors px-0 md:px-4"
+        className={`cursor-pointer select-none transition-colors px-0 md:px-0`}
         onClick={onToggle}
       >
-        <div className="flex items-center justify-between py-1 ml-4 md:ml-2">
+        <div className="flex items-center justify-between py-2 ml-4 md:ml-2 md:p-2">
           <span className="font-['Gilroy-Medium', 'Helvetica', 'Arial', 'sans-serif'] text-[12px] font-normal leading-none tracking-[1.6px] uppercase text-[#484848]">
             STEP {stepNumber} OF {totalSteps}
           </span>
         </div>
 
-        <div className="border-b border-black mx-0"></div>
+        <div className="border-b border-[#1F1F1F] mx-0"></div>
 
-        <div className="flex items-center justify-between py-4 ml-4 md:ml-2">
+        <div className="flex items-center justify-between py-4 ml-4 md:ml-2 md:p-2">
           <div className="flex items-center gap-1 sm:gap-2 min-w-0">
             <img
               src={stepIcons[step.id]}
@@ -66,7 +66,7 @@ const Step = ({ step, isOpen, onToggle, selections, children }) => {
       </div>
 
       <div className={`step-content ${isOpen ? "open" : ""}`}>
-        <div className="space-y-4">
+        <div className="space-y-4 md:p-2">
           {children}
           {isOpen && stepNumber < totalSteps && (
             <div className="pt-2 pb-1 flex justify-center">
@@ -75,7 +75,10 @@ const Step = ({ step, isOpen, onToggle, selections, children }) => {
                text-center text-[18px] leading-[24px] font-normal
                px-6 py-[5px] flex items-center justify-center gap-2 transition-colors 
                border-2 border-[#4E2FD2] hover:bg-[#4E2FD2] hover:text-white"
-                style={{ fontFamily: "Gilroy-SemiBold, sans-serif" }}
+                style={{
+                  fontFamily: "Gilroy-SemiBold, sans-serif",
+                  fontWeight: "400",
+                }}
                 onClick={(e) => {
                   e.stopPropagation();
                   onToggle(bundleData.steps[stepNumber].id);

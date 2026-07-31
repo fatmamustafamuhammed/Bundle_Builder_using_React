@@ -7,6 +7,7 @@ const ProductCard = ({
   activeVariantId,
   onSetVariant,
   onSetActive,
+  isTablet,
 }) => {
   const {
     id,
@@ -117,8 +118,12 @@ const ProductCard = ({
         </div>
       )}
 
-      <div className="flex-1 flex items-center gap-2 pt-1">
-        <div className="w-24 h-24 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+      <div
+        className={`flex-1 flex items-center gap-2 pt-1 ${isTablet && "flex-col"}`}
+      >
+        <div
+          className={`${isTablet ? "" : "w-24 h-24"} rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden`}
+        >
           {typeof imageToShow === "string" &&
           (imageToShow.startsWith("/") ||
             imageToShow.startsWith(".") ||
@@ -134,18 +139,33 @@ const ProductCard = ({
         </div>
 
         <div className="flex-1 min-w-0 space-y-0.5">
-          <h4 className="font-semibold text-[14px] text-[#1a1a2e] leading-tight">
+          <h4 className="font-bold text-[18px] text-[#1a1a2e] leading-tight">
             {name}
           </h4>
-          <p className="text-[12px] text-[#5a5a6e] leading-tight line-clamp-2">
-            {description}
-          </p>
-          <a
-            href={learnMoreUrl}
-            className="text-[12px] text-[#2d7aff] font-medium hover:underline inline-block"
+          <p
+            className="
+    text-[12px]
+    text-[#5a5a6e]
+    leading-[130%]
+    tracking-[0.6px]
+    font-normal
+    font-['Gilroy-Medium']
+  "
+            style={{ fontFamily: "Gilroy-Medium, sans-serif" }}
           >
-            Learn More
-          </a>
+            {description}
+            <a
+              href={learnMoreUrl}
+              className="
+      text-[#2d7aff]
+      font-medium
+      hover:underline
+      inline-block
+    "
+            >
+              Learn More
+            </a>
+          </p>
 
           {showColorSelector && (
             <div className="mt-0.5">
@@ -159,6 +179,7 @@ const ProductCard = ({
                   }
                   onSetActive(id, vid);
                 }}
+                isTablet={isTablet}
               />
             </div>
           )}

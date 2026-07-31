@@ -70,7 +70,7 @@ function App() {
         <div
           className={`two-col flex ${
             isTablet ? "flex-col" : ""
-          } gap-6 items-start`}
+          } gap-1 items-start`}
         >
           <div
             className={`left ${isTablet ? "w-full" : "w-[70%]"} min-w-0 mt-0`}
@@ -106,6 +106,7 @@ function App() {
                               activeVariantId={activeVid}
                               onSetVariant={setVariantQuantity}
                               onSetActive={setActiveVariant}
+                              isTablet={isTablet}
                             />
                           </div>
                         );
